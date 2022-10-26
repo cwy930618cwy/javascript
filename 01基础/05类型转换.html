@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 将其他数据类型转换为string
+			var a = 123;
+			// 方法1，但无法处理null，undefined类型
+			console.log(typeof a.toString())
+
+			// 方法2
+			console.log(typeof String(a))
+			
+			// 将其他数据类型转换为Number
+			var b = "123"
+			// 方法1,但变量中带有字符串则无法处理
+			console.log(typeof Number(b))
+
+			// 方法2,parseInt()将字符串中有效的整数内容取出，转换为number,如果对非string使用会先转换成string再操作
+			var g = "100px"
+			g = parseInt(g)
+			console.log(typeof g)
+			// 取整
+			console.log(parseInt(100.5))
+			
+			// 将其他数据类型转换为boolean
+			// 数字除了0和undefined都是true,字符串除了空串都是true,null转换为false
+			var i = 1;
+			console.log(Boolean(i))
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

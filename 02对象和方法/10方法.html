@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 函数的属性和方法
+			// 函数声明
+			function f1() {
+				console.log("函数声明")
+			}
+			f1();
+
+			// 函数表达式
+			var f2 = function() {
+				console.log("函数表达式")
+			}
+			f2();
+
+			// 立即执行函数
+			(function(a, b){
+				console.log('立即执行函数')
+			})(123,456);
+
+	
+			// 对函数调用call和apply都会调用函数执行
+			// call和apply可以将一个对象指定为第一个参数,该对象会成为函数执行时的this
+			var  obj = {name:"a"};
+			// call方法可以将实参在对象之后依次传递
+			function fun3(a,b){
+				console.log(this);
+				console.log(a);
+				console.log(b);
+				console.log(this.name)
+			}
+			// call方法可以将实参在对象之后依次传递
+			fun3.call(obj,1,2);
+			// apply方法需要将实参封装到数组里传递
+			fun3.apply(obj,[3,4])
+			// this以函数形式调用，this永远是window
+			// 以方法形式调用时，this是调用方法的对象
+			// 以构造函数形式调用，this是新创建的那个对象
+			// 使用call和apply调用，this是指定传入的的对象
+
+		    // arguments
+			// 在调用函数时，浏览器会传递进两个隐含的参数：上下文对象this，封装实参的对象arguments
+			function fun(a){
+				console.log(a)
+				console.log(arguments)
+			}
+			fun(10);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

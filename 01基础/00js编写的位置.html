@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 3.引入外部js后，无法在该script中添加内容 -->
+		<script type="text/javascript" src="../js/script.js"></script>
+		<!-- 2.可以编写到script标签中 -->
+		<script type="text/javascript">
+			console.log("内部js")
+		</script>
+	</head>
+	<body>
+		<!-- 1.可以编写到标签的指定属性中 -->
+		<button type="button" onclick="console.log('可以编写到标签的指定属性中')">可以编写到标签的指定属性中</button>
+		<a href="javascript:alert('aaa')">超链接</a>
+		<a href="javascript:;">超链接</a>
+	</body>
+</html>
